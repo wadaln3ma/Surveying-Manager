@@ -1,0 +1,44 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "packageManager": "yarn@3.6.1",
+  "scripts": {
+    "start": "babel-node server/index.js",
+    "client": "cd ./client && yarn dev",
+    "server": "nodemon --exec babel-node server/index.js",
+    "dev": "concurrently \"yarn server\" \"yarn client\"",
+    "build": "yarn && cd ./client && yarn && yarn build",
+    "test": "vitest --coverage"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.15",
+    "@babel/node": "^7.22.15",
+    "@babel/preset-env": "^7.22.15",
+    "@vitest/coverage-v8": "^0.34.5",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1",
+    "pino": "^8.15.0",
+    "pino-pretty": "^10.2.0",
+    "supertest": "^6.3.3",
+    "vitest": "^0.34.5"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "concurrently": "^8.2.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "date-fns": "^2.30.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "express-list-routes": "^1.1.5",
+    "joi": "^17.10.2",
+    "joi-password-complexity": "^5.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb-memory-server": "^8.15.1",
+    "mongoose": "^7.5.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "uuid": "^9.0.1"
+  }
+}
