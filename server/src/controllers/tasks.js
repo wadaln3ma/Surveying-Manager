@@ -187,7 +187,7 @@ export const downloadCsv = asyncHandler(async (req, res)=>{
 
   const points = await PointModel.find({taskName})
 
-  if(points.length === 0){
+  if(await points.length === 0){
     res.status(404)
     throw new Error('Task is empty, No Points found')
     return

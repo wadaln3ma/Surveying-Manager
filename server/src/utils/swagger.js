@@ -29,14 +29,14 @@ const definition = {
       url: `http://localhost:${PORT}`,
     },
     {
-      url: `https://surveyingmanagerapi.onrender.com`,
+      url: `https://surveying-manager.onrender.com`,
     },
   ]
 }
 
 const options = {
   definition,
-  apis: ['./src/models/*.js', './src/routes/*.js']
+  apis: ['./server/src/models/*.js', './server/src/routes/*.js']
 }
 
 const specs = swaggerJsdoc(options)
